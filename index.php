@@ -1,3 +1,4 @@
+<?php include_once 'includes/functions.php'; ?>
 <!DOCTYPE html>
 <html itemscope itemtype="http://schema.org/Article">
 <head>
@@ -32,6 +33,15 @@
   <link rel="stylesheet" type="text/css" href="" />
 </head>
 <body>
-  <script src=""></script>
+  <div>asdas</div>
+  <?php
+    $files = array(
+              'includes/js/jquery-3.3.1.js',
+            );
+    echo combine_my_files($files, 'content/cache/', '.js', 1);
+  ?>
+  <script type="text/javascript">
+    $('div').fadeOut();
+  </script>
 </body>
 </html>
